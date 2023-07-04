@@ -49,13 +49,10 @@
     <link rel="stylesheet" href="assets/tech/simflex/simflex.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <style>
-        .widget .logo:after {
-            margin-left: 29px !important;
-        }
 
         .ak-return-link.title .logo:after {
-            margin-left: 38px !important;
-            margin-top: -11px !important;
+            /* margin-left: 38px !important; */
+            margin-top: -3px !important;
         }
     </style>
         <title>DofusTouch</title>
@@ -89,8 +86,7 @@
                     data-target="encyclo">Encyclopedie<br><span class="flecheNav center-block_lg fleche dropdown-js" data-target="encyclo">▼</span></span></button>
             <a href="https://www.dofus-touch.com/" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
             <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/ladder" class="element center-block_lg"><span class="textNav column-lg">Ladders<br><span
-                class="center-block_lg fleche"> </span></span>
-    </a>
+                class="center-block_lg fleche"> </span></span></a>
             <button onblur="lose_focus(event)"  tabindex="0" onclick="dropdownmenu('communauter')" class="buttonNav element center-block_lg tire dropdown-js" data-target="communauter">
                 <span class="textNav column-lg dropdown-js dropdown-js" data-target="communauter">Communauté<br>
                     <span class="flecheNav center-block_lg fleche dropdown-js" data-target="communauter">▼</span>
@@ -315,7 +311,7 @@
         </div>
     </nav>
     <div class="navMenu jlg-between hidden-lg">
-        <div class="center-block_lg">
+        <div onclick="openMenu()" class="center-block_lg">
             <svg style="fill:white; padding-left:12px;" version="1.1" id="Untitled-2" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="35px"
                 viewBox="0 0 18 12" enable-background="new 0 0 18 12" xml:space="preserve">
@@ -337,6 +333,238 @@
             </a>
         </div>
     </div>
+    <aside class="ak-slidemenu ak-slidemenu-open" style="display: none;">
+        <div class="menu-container">
+            <ul class="menu">
+                <li onclick="openLvl1('univers')" class="dpdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">L'univers 
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl1('actualité')" class="dpdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Actualités 
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl1('encyclopédie')" class="dpdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Encyclopédie 
+                        <b class="caret"></b>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/ladder">Ladders</a>
+                </li>
+                <li onclick="openLvl1('communauté')" class="dpdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Communauté 
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/forum">Forums</a>
+                </li>
+            </ul>
+            <!-- Level 1 -->
+            <ul style="display: none;" class="level-1 menu" style="min-height: 686px;">
+                <li onclick="openLvl1('univers')" class="dpdown back">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">L'univers 
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl2('jeuLigne')" class="dpdown">
+                    <a href="javascript:void(0);">Jeu en ligne
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl2('animation')" class="dpdown">
+                    <a href="javascript:void(0);">Animation
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl2('editions')" class="dpdown">
+                    <a href="javascript:void(0);">Editions
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl2('krosmaster')" class="dpdown">
+                    <a href="javascript:void(0);">DOFUS Krosmaster
+                        <b class="caret"></b>
+                    </a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-1 menu" style="min-height: 686px;">
+                <li  onclick="openLvl1('actualité')" class="dpdown back">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Actualités <b class="caret"></b></a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/actualites/news">News</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/actualites/devblog">Devblog</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/actualites/maj">Mises à jour</a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-1 menu" style="min-height: 686px;">
+                <li onclick="openLvl1('encyclopédie')" class="dpdown back">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Encyclopédie 
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/classes">Classes</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/metiers">Métiers</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/monstres">Bestiaire</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/armes">Armes</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/equipements">équipements</a>
+                </li>
+                <li>
+                    <a href="https://www.krosmoz.com/fr/almanax" target="_blank">Almanax</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/panoplies">Panoplies</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/familiers">Familiers</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/montures">Montures</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/consommables">Consommables</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources">Ressources</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/encyclopedie/objets-d-apparat">Objets d'apparat </a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-1 menu" style="min-height: 686px;">
+                <li onclick="openLvl1('communauté')" class="dpdown back">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Communauté 
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl2('informations')" class="dpdown">
+                    <a href="javascript:void(0);">Informations
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl2('annuaires')" class="dpdown">
+                    <a href="javascript:void(0);">Annuaires
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li onclick="openLvl2('coinJoueurs')" class="dpdown">
+                    <a href="javascript:void(0);">le coin des joueurs
+                        <b class="caret"></b>
+                    </a>
+                </li>
+            </ul>
+            <!-- Level 2 -->
+            <ul style="display: none;" style="display: none;" class="level-2 menu" style="min-height: 636px;">
+                <li onclick="openLvl2('jeuLigne')" class="dpdown back">
+                    <a href="javascript:void(0);">Jeu en ligne<b class="caret"></b></a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/decouvrir">Découvrir</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/tutoriels">Apprendre à jouer</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/jouer">Télécharger le jeu</a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-2 menu" style="min-height: 636px;">
+                <li onclick="openLvl2('animation')" class="dpdown back">
+                    <a href="javascript:void(0);">Animation
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/animation/univers">La série</a>
+                </li>
+                <li>
+                    <a href="http://www.dofus-le-film.com/fr" target="_blank">Le film</a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-2 menu" style="min-height: 636px;">
+                <li onclick="openLvl2('editions')" class="dpdown back">
+                    <a href="javascript:void(0);">Editions
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/editions/univers">Découvrir</a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-2 menu" style="min-height: 636px;">
+                <li onclick="openLvl2('krosmaster')" class="dpdown back">
+                    <a href="javascript:void(0);">DOFUS Krosmaster
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.krosmaster.com/fr/prehome">Découvrir</a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-2 menu" style="min-height: 636px;">
+                <li onclick="openLvl2('informations')" class="dpdown back">
+                      <a href="javascript:void(0);">Informations
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/reglement">Règles de conduite</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/serveurs">Statut des serveurs</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/phishing">securité</a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-2 menu" style="min-height: 636px;">
+                <li onclick="openLvl2('annuaires')" class="dpdown back">
+                    <a href="javascript:void(0);">Annuaires
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/annuaires/pages-persos">Pages perso</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/annuaires/pages-guildes">Guildes</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/annuaires/pages-artisans">Artisans</a>
+                </li>
+            </ul>
+            <ul style="display: none;" class="level-2 menu" style="min-height: 636px;">
+                <li onclick="openLvl2('coinJoueurs')" class="dpdown back">
+                    <a href="javascript:void(0);">le coin des joueurs
+                        <b class="caret"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/forum">Forums</a>
+                </li>
+                <li>
+                    <a href="https://www.dofus-touch.com/fr/mmorpg/communaute/codes">Code Cadeau</a>
+                </li>
+            </ul>
+      </aside>
     <main class="container">
         <div class="container ak-container t column-reverse-xs">
             <div class=" row-lg center-block_xs top-right_lg clg24">
@@ -842,12 +1070,6 @@ Weekend bonus +50 % XP et drop</span>
     <script src="assets/js/function.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/jquery.js"></script>
-
-    <button onclick="showPopup()">Cliquez ici</button>
-
-<div id="popup" style="display: none;">
-  <p>Contenu du popup</p>
-</div>
 <div class="voile" style="display: none; height: 3162px;"></div>
 
 </body>

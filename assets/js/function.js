@@ -42,28 +42,28 @@ function dropdownmenu(dropdown) {
       .getElementById("univers")
       .setAttribute(
         "style",
-        "top:112px;position:absolute;display:flex;left:420px"
+        "top:112px;position:absolute;display:flex;left:600px"
       );
   } else if (dropdown == "actualité") {
     document
       .getElementById("actualité")
       .setAttribute(
         "style",
-        "top:112px;position:absolute;display:flex;left:499px"
+        "top:112px;position:absolute;display:flex;left:650px"
       );
   } else if (dropdown == "encyclopedie") {
     document
       .getElementById("encyclopedie")
       .setAttribute(
         "style",
-        "top:112px;position:absolute;display:flex;left:583px"
+        "top:112px;position:absolute;display:flex;left:700px"
       );
   } else if (dropdown == "communauter") {
     document
       .getElementById("communauter")
       .setAttribute(
         "style",
-        "top:112px;position:absolute;display:flex;left:380px"
+        "top:112px;position:absolute;display:flex;left:900px"
       );
   }
 }
@@ -130,4 +130,144 @@ function popupToVerifcode3(){
   document.getElementsByClassName("content-popup")[0].setAttribute("style","display:none")
   document.getElementById("verifcodeContent2").setAttribute("style","display:none")
   document.getElementById("verifcodeContent3").setAttribute("style","display:block")
+}
+open = false
+function openLvl1(target){
+  if(target == 'univers' && open == false){
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[4].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open = true
+  }
+  else if(target == 'univers' && open == true){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:none") 
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:block;")
+    open = false
+  }
+  else if(target == 'actualité' && open == false){
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-1")[1].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[9].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open = true
+  }
+  else if(target == 'actualité' && open == true){
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-1")[1].setAttribute("style","display:none") 
+    open = false
+  }
+  else if(target == 'encyclopédie' && open == false){
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-1")[2].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[10].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open = true
+  }
+  else if(target == 'encyclopédie' && open == true){
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-1")[2].setAttribute("style","display:none") 
+    open = false
+  }
+  else if(target == 'communauté' && open == false){
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[11].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open = true
+  }
+  else if(target == 'communauté' && open == true){
+    document.getElementsByClassName("menu")[1].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:none") 
+    open = false
+  }
+}
+open1 = false
+function openLvl2(target){
+  console.log(target, open1)
+  if(target == 'jeuLigne' && open1 == false){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-2")[0].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[15].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open1 = true
+  }
+  else if(target == 'jeuLigne' && open1 == true){
+    document.getElementsByClassName("level-2")[0].setAttribute("style","display:none") 
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:block;")
+    open1 = false
+  }
+  else if(target == 'animation' && open1 == false){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-2")[1].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[16].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open1 = true
+  }
+  else if(target == 'animation' && open1 == true){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-2")[1].setAttribute("style","display:none") 
+    open1 = false
+  }
+  else if(target == 'editions' && open1 == false){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-2")[2].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[17].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open1 = true
+  }
+  else if(target == 'editions' && open1 == true){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-2")[2].setAttribute("style","display:none") 
+    open1 = false
+  }
+  else if(target == 'krosmaster' && open1 == false){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-2")[3].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[18].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open1 = true
+  }
+  else if(target == 'krosmaster' && open1 == true){
+    document.getElementsByClassName("level-1")[0].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-2")[3].setAttribute("style","display:none") 
+    open1 = false
+  }
+  else if(target == 'informations' && open1 == false){
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-2")[4].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[19].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open1 = true
+  }
+  else if(target == 'informations' && open1 == true){
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-2")[4].setAttribute("style","display:none") 
+    open1 = false
+  }
+  else if(target == 'annuaires' && open1 == false){
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-2")[5].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[20].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open1 = true
+  }
+  else if(target == 'annuaires' && open1 == true){
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-2")[5].setAttribute("style","display:none") 
+    open1 = false
+  }
+  else if(target == 'coinJoueurs' && open1 == false){
+    console.log("open")
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:none;")
+    document.getElementsByClassName("level-2")[6].setAttribute("style","display:block;") 
+    document.getElementsByClassName("caret")[21].setAttribute("style","float: inline-start;margin-top: 5px;rotate: 180deg;margin-right: 5px")
+    open1 = true
+  }
+  else if(target == 'coinJoueurs' && open1 == true){
+    document.getElementsByClassName("level-1")[3].setAttribute("style","display:block;")
+    document.getElementsByClassName("level-2")[6].setAttribute("style","display:none") 
+    open1 = false
+  }
+}
+open2 = false
+function openMenu(){
+  if(open2 == false){
+    document.querySelector("aside").setAttribute("style","display:block;")
+    open2 = true
+  }
+  else if(open2 == true){
+    document.querySelector("aside").setAttribute("style","display:none;")
+    open2 = false
+  }
 }
