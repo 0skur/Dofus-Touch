@@ -4,17 +4,18 @@ function openpopup(boutonBas) {
     marginTopValue = (screen.height)/2-document.getElementById("1").clientHeight+document.querySelector("html").scrollTop/2.5
     console.log(marginTopValue)
     document.getElementById("1").setAttribute("style", "display: block;margin-top:"+marginTopValue+"px");
-    document.getElementById("2").setAttribute("style", "display: block;height: 1716px");
+    document.getElementById("2").setAttribute("style", "display: block;height:"+document.querySelector("html").scrollHeight+"px");
   } else {
+
     document.getElementById("0").setAttribute("style", "display: block;");
     document.getElementById("1").setAttribute("style", "display: block;");
-    document.getElementById("2").setAttribute("style", "display: block;");
+    document.getElementById("2").setAttribute("style", "display: block;height:"+document.querySelector("html").scrollHeight+"px");
   }
 }
 function closepopup() {
   document.getElementById("0").setAttribute("style", "display: none;");
   document.getElementById("1").setAttribute("style", "display: none;");
-  document.getElementById("2").setAttribute("style", "display: none;");œ
+  document.getElementById("2").setAttribute("style", "display: none;");
 }
 wsrwdrhhwrt = [
   "univers",
@@ -116,17 +117,17 @@ function showPopup() {
   popup.style.display = "block";
 }
 function popupToVerifcode(){
-  oldContent = document.getElementsByClassName("content-popup")[0]
-  oldContent.remove()
+  document.getElementsByClassName("content-popup")[0].setAttribute("style","display:none")
+  document.getElementById("verifcodeContent2").setAttribute("style","display:none")
   document.getElementById("verifcodeContent").setAttribute("style","display:block")
 }
 function popupToVerifcode2(){
-  oldContent = document.getElementById("verifcodeContent")
-  oldContent.remove()
+  document.getElementsByClassName("content-popup")[0].setAttribute("style","display:none")
+  document.getElementById("verifcodeContent").setAttribute("style","display:none")
   document.getElementById("verifcodeContent2").setAttribute("style","display:block")
 }
 function popupToVerifcode3(){
-  oldContent = document.getElementById("verifcodeContent2")
-  oldContent.remove()
+  document.getElementsByClassName("content-popup")[0].setAttribute("style","display:none")
+  document.getElementById("verifcodeContent2").setAttribute("style","display:none")
   document.getElementById("verifcodeContent3").setAttribute("style","display:block")
 }

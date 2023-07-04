@@ -31,7 +31,7 @@ body {
 }
 .textNav{
   font-family: "roboto-slab";
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .flecheNav{
   font-family: "roboto-slab";
@@ -198,8 +198,8 @@ nav .option .right a.flag:hover {
 .menu .element.tire:after {
   content: "";
   height: 60%;
-  width: 2px;
-  background-color: black;
+  border-left: 1px solid #333;
+  border-right: 1px solid #000;
 }
 
 .menu .element.tire:after .navbrand {
